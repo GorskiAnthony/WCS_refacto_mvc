@@ -1,9 +1,9 @@
 const express = require("express");
-const userController = require("./controllers/userController");
-
 const app = express();
+const mainRouter = require("./router");
 
-app.get("/", userController.getAllUser);
-app.get("/:id", userController.getOneUser);
+app.use(express.json());
+
+app.use(mainRouter);
 
 module.exports = app;
