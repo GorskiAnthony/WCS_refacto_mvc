@@ -8,6 +8,7 @@ const findAll = () => {
 	const SQL = "SELECT * FROM formateur";
 	return db.query(SQL);
 };
+
 const findOne = (id) => {
 	const SQL = "SELECT * FROM formateur WHERE id = ?";
 	return db.query(SQL, [id]);
